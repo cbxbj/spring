@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="bean5" class="org.example.a_bean.b_implement.Bean5"/>
+
+    <bean id="bean2" class="org.example.a_bean.b_implement.Bean6">
+        <property name="bean5" ref="bean5"/>
+    </bean>
+
+    <!-- 添加一些常用的后处理器 -->
+    <context:annotation-config/>
+
+</beans>
